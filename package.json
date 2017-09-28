@@ -1,0 +1,20 @@
+{
+  "name": "simple-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "knex": "knex"
+  },
+  "author": "Dan Levy <Dan@DanLevy.net>",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "knex": "^0.13.0",
+    "morgan": "^1.8.2",
+    "sqlite3": "^3.1.12"
+  }
+}
