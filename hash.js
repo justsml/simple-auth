@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs')
 
-module.exports = {hash}
+module.exports = hash
 
 function hash(str) {
   return new Promise((resolve, reject) => {

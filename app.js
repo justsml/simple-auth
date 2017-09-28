@@ -3,7 +3,7 @@ const express     = require('express');
 const bodyParser  = require('body-parser');
 const morgan      = require('morgan')
 const knex        = require('./knexfile')
-const {hash}      = require('./hash')
+const hash        = require('./hash')
 const app         = module.exports = express()
 const port        = parseInt(process.env.PORT || '3000')
 const server      = http.createServer(app)
@@ -21,7 +21,7 @@ app.all('/', (req, res) => {
 function login(req, res, next) {
   let {email, password} = req.query
   hash(password).then(hashedPassword => {
-    return knex('users').select().where({email, password: hashedPassword})
+    return knex('users').select('*').where({email, password: hashedPassword})
   })
   .then(user => res.send({user}))
   .catch(err => res.status(500).send({error: err.message, stack: err.stack}))

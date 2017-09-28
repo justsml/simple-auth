@@ -1,9 +1,10 @@
 {
   "name": "simple-auth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon app",
     "test": "ava test",
     "knex": "knex"
   },
@@ -16,6 +17,7 @@
     "express": "^4.15.4",
     "knex": "^0.13.0",
     "morgan": "^1.8.2",
+    "nodemon": "^1.12.1",
     "sqlite3": "^3.1.12"
   }
 }
